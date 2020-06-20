@@ -1,0 +1,9 @@
+listen_http: 80
+listen_https: 443
+nginx_user: nginx
+worker_processes: auto
+worker_connections: 1024
+jenkins_ip: 192.168.1.6
+jenkins_port: 8080
+cloudera_ip:  192.168.1.6
+cloudera_port: 7180

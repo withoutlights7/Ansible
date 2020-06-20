@@ -1,0 +1,13 @@
+---
+- hosts: vm01-servers
+  become:
+    true
+  become_method:
+    su
+  become_user:
+    root
+  remote_user:
+    root
+  roles:
+   - epel
+   - nginx
