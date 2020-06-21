@@ -1,5 +1,5 @@
 ---
-- hosts: vm01-servers
+- hosts: slave-servers
   become:
     true
   become_method:

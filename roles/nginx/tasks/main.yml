@@ -7,6 +7,7 @@
     ansible_os_family == "RedHat"
   notify:
     - nginx systemd
+  tags: install
 
 - name: Replace NGINX config
   template:
@@ -14,4 +15,11 @@
     dest=/etc/nginx/nginx.conf
   notify:
     - nginx reload
+  tags: config
+
+- name: Delete Nginx Web Server
+  yum:
+    name=nginx
+    state=absent
+  tags: delete
 
